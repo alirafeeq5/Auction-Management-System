@@ -1,0 +1,11 @@
+CREATE OR REPLACE
+PROCEDURE BIDS
+( PID IN NUMBER
+, CUR OUT sys_refcursor
+) AS
+BEGIN
+  open cur for
+  select u.uname, b.offered_price
+  from puser u, bidding b
+  where b.p_id = pid and u.user_id = b.u_id;
+END BIDS;

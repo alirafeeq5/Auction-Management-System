@@ -1,0 +1,8 @@
+create or replace PROCEDURE MAXOFFER
+( pid IN NUMBER
+, offer OUT NUMBER
+) AS
+BEGIN
+  select max(offered_price) into offer
+  from bidding where p_id = pid;
+END MAXOFFER;

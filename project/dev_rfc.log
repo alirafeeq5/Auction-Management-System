@@ -1,0 +1,10 @@
+
+**** Log file opened at 2022-05-07 19:41:27.569971 UTC+02:00 (Egypt Standard Time), Encoding UTF-8
+NW RFC Library: SDK variant, Release 750 Patch Level 7, Compiled on Sep 19 2020 01:34:20
+ CPIC library: 753.2020.09.14 version 3, NI library: 40, Kernel Release: 753 Patch Level 711
+ Current working directory: C:\Users\ASUS\Desktop\Year 2 Semester 2\SW\project\project, Program: crw64
+ Hardware: PC with Windows NT 4x AMD64 Level 6 (Mod 58 Step 9), Operating_system: Windows NT 10.0
+ Hostname: DESKTOP-L40J2L3, IP address: 192.168.1.29, IPv6 address: fe80::65f5:b7e7:3c7e:83b2
+
+2022-05-07 19:41:27.572633 [06160] >> Info entry
+	Did not find config file C:\Users\ASUS\Desktop\Year 2 Semester 2\SW\project\project\sapnwrfc.ini.

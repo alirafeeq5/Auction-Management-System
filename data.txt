@@ -1,0 +1,98 @@
+Create Table puser
+(user_id number(15) primary key, uname varchar2(50), title 
+varchar2(50));
+
+Create Table product
+(product_id number(15) primary key, product_name varchar2(50), price 
+number (15), u_id number(15) references puser (user_id) ON Delete 
+cascade);
+
+Create Table bidding
+( u_id number(15) references puser (user_id) ON Delete 
+cascade   ,   p_id number(15) references product (product_id) ON Delete 
+cascade);
+
+insert into puser values
+(20201701712,'hazem Mansour’, ‘customer');
+
+insert into puser values
+(20201701702,'Ahmad Tarek','seller');
+
+insert into puser values
+(20201701705,'Ali','customer');
+
+insert into puser values
+(20201701701,'ibrahim nagy','seller');
+
+insert into puser values
+(20201701729,'Kiven shrif','customer');
+
+insert into puser values
+(20191703020,'Abdulaziz','seller');
+
+insert into product values
+(123456789,'silver pistol',12000,20201701702);
+
+insert into product values
+(123321123,'wheel chair',115,20201701702);
+insert into product values
+(155166999,'Nissan car',60000,20191703020);
+insert into product values
+(188909787,'blood pressure device',70,20191703020);
+insert into product values
+(101999481,'Air conditioner',500,20201701701);
+insert into product values
+(119849831,'TV',450,20201701701);
+
+ALTER TABLE bidding 
+ADD		   (offered_price number(15));
+
+insert into bidding values 
+(20201701712,123456789,13000);
+insert into bidding values 
+(20201701712,155166999,65000);
+
+insert into bidding values 
+(20201701705,101999481,600);
+insert into bidding values 
+(20201701705,123321123,140);
+insert into bidding values 
+(20201701729,188909787,100);
+insert into bidding values 
+(20201701729,119849831,500);
+
+
+
+
+
+
+
+Create Table puser
+(user_id number(15) primary key, uname varchar2(50), title 
+varchar2(50));
+
+Create Table product
+(product_id number(15) primary key, product_name varchar2(50), price 
+number (15), u_id number(15) references puser (user_id) ON Delete 
+cascade);
+
+Create Table bidding
+( u_id number  (15)  references  puser (user_id) ON DELETE SET NULL
+,   p_id number(15)  references product (product_id) ON DELETE SET NULL);
+
+ALTER TABLE bidding 
+ADD		   (offered_price number(15));
+
+insert into bidding values 
+(20201701712,123456789,13000);
+insert into bidding values 
+(20201701712,155166999,65000);
+
+insert into bidding values 
+(20201701705,101999481,600);
+insert into bidding values 
+(20201701705,123321123,140);
+insert into bidding values 
+(20201701729,188909787,100);
+insert into bidding values 
+(20201701729,119849831,500);
